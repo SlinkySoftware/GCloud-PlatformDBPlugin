@@ -54,9 +54,16 @@ Some database schemas store data not particularly useful to Genesys Cloud - so t
 #### Configuration Example ####
 
 ```
-oracle.url=jdbc:oracle:thin:@oracleserver.domain.local:1521/ORCL.domain.local
-oracle.user=MY_ORACLE_USER
-oracle.pass=ENC:encryptedpasswordhere
+cloud.database.url=jdbc:sqlserver://sql2022db.domain.com:1433
+cloud.database.username=MyDBUserName
+cloud.database.password=ENC:SomeEncryptedPassword
+cloud.database.properties.encrypt=true
+cloud.database.properties.databaseName=MGMT_DB
+#cloud.database.properties.domain=ad.domain.local
+cloud.database.properties.realm=ad.domain.local
+cloud.database.properties.authentication=NotSpecified
+cloud.database.properties.authenticationScheme=NTLM
+cloud.database.properties.integratedSecurity=true
 
 # A basic query for a user. URL would be http://hostname/api/v1/record/123?queryType=USERLOOKUP to look up user id #123
 
