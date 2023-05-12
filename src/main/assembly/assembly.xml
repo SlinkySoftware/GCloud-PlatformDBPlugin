@@ -1,0 +1,20 @@
+<assembly>
+    <id>plugin</id>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <scope>runtime</scope>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*:jar:*</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>target/plugin-classes</directory>
+            <outputDirectory>classses</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
